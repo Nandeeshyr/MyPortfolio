@@ -1,0 +1,252 @@
+/* Hacker-Themed Styling */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    font-family: 'VT323', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #00FF00;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: #111;
+    padding: 40px 0;
+    text-shadow: 0 0 10px #00FF00;
+    display: flex;
+    justify-content: space-between; /* Adjust if needed */
+    align-items: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.timelines{
+    color:#FF0000;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+/* Navigation */
+nav {
+    background-color: #222;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #00FF00;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FF0000;
+}
+
+/* Sections */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid #00FF00;
+}
+
+section:hover {
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 20px #00FF00;
+    transform: scale(1.02);
+}
+
+
+/* Projects Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project {
+    position: relative;
+    cursor: pointer;
+}
+
+.project:hover .details {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.details {
+    display: none;
+    background-color: rgba(0, 255, 0, 0.1);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #111;
+    padding: 20px 0;
+}
+
+/* Highlighted text */
+.highlight {
+    color: #FF0000;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.terminal-text {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 16px;
+    background-color: #00FF00;
+    margin-left: 5px;
+    animation: blink 0.8s infinite;
+}
+
+/* Skills Section */
+#skills ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+#skills li {
+    background: #222;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00FF00;
+    font-size: 1.2em;
+}
+
+/* Contact Section */
+#contact a {
+    color: #00FF00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: #FF0000;
+}
+
+/* Experience Styling */
+.job {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00FF00;
+}
+
+/* Internship Section */
+.internship {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Light mode*/
+.light-mode {
+    background-color: #ffffff;
+    color: #222;
+}
+
+.light-mode header,
+.light-mode nav,
+.light-mode section,
+.light-mode footer {
+    background: #ffffff;
+    color: #222;
+    box-shadow: 0 0 15px #007bff;
+}
+
+.light-mode a {
+    color: #007bff;
+}
+
+.light-mode .job,
+.light-mode .internship,
+.light-mode .project,
+.light-mode #skills li {
+    background: #ffffff;
+    box-shadow: 0 0 10px #000000;
+}
+
+.light-mode .terminal-text {
+    color: #007bff;
+}
+.toggle-switch {
+    width: 80px;
+    height: 40px;
+    background: #222;
+    border-radius: 40px;
+    position: fixed;
+    cursor:grab;
+    transition: background 0.3s;
+    box-shadow: 0 0 10px #00FF00; /* Glow effect */
+}
+
+.slider {
+    width: 34px;
+    height: 34px;
+    background: #00FF00;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px #00FF00; /* Glow effect */
+}
+
+.light-mode .toggle-switch {
+    background: #00FF00;
+    box-shadow: 0 0 15px #007bff; /* Glow in light mode */
+}
+
+.light-mode .slider {
+    transform: translateX(40px);
+    background: #000000;
+    box-shadow: 0 0 10px #000000; /* Glow effect */
+}
+
+
