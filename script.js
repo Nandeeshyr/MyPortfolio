@@ -53,7 +53,3 @@ setInterval(updateStatus, 1000);
 
 // Set an initial value when the page loads
 updateStatus();
-
-
-
-
